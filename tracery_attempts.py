@@ -40,7 +40,7 @@ def some_story(rng):
 
     story = Choice.solo(
         _join(
-            _cap(hero), " was a great ", occupation, " and this song tells of ", heroPronouns["their"],
+            _cap(hero), " was a great ", heroOccupation, " and this song tells of ", heroPronouns["their"],
             " adventure.  ", _cap(hero), " ", didstuff, ", then ", heroPronouns["they"], " ", didstuff, ", then ", heroPronouns["they"], " went home to read a book."
         )
     )
