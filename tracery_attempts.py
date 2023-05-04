@@ -21,7 +21,10 @@ def some_story(rng):
         {"their": "his", "they": "he"},
         {"their": "her", "they": "she"},
     )
-    monster = Choice.of("dragon","ogre","witch","wizard","goblin","golem","giant","sphinx","warlord")
+    monster = Choice.of(
+        "dragon","ogre","witch","wizard","goblin","golem","giant","sphinx","warlord",
+        "oubliette","archeopteryx","iguana man",
+    )
     occupation = Choice.of("baker", "warrior")
     stuff = {
         "baker": Choice.of("baked bread", "decorated cupcakes", "folded dough", "made croissants", "iced a cake"),
