@@ -1,4 +1,5 @@
 from collections import Counter
+import math
 import random
 
 import pytest
@@ -7,7 +8,7 @@ from choice import Choice
 
 
 NUM_TRIALS = 10000
-PRECISION = 0.1
+PRECISION = 3 * 1/math.sqrt(NUM_TRIALS)
 SEED = 1
 
 
