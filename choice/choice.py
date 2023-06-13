@@ -101,9 +101,6 @@ class Choice:
                 raise ValueError(f"Outcomes sum to {self.summed} instead of {total}")
         self.total = total
 
-    def __or__(self, other):
-        return self.either(self, other)
-
     def __repr__(self):
         clsname = self.__class__.__name__
         if self.is_remainder:
@@ -275,6 +272,9 @@ class Choice:
 
     def __not__(self, *args):
         return self.delayed(operator.not_)(self, *args)
+
+    def __or__(self, *args):
+        return self.delayed(operator.or_)(self, *args)
 
     def __pos__(self, *args):
         return self.delayed(operator.pos)(self, *args)
